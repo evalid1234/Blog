@@ -71,6 +71,22 @@ section {
     color: gray;
 }
 
+.nested-code { 
+     display: block;
+    background-color: #000;
+    max-width: 100%;
+    padding:1rem;
+    margin:1rem 0;
+    margin-left: 2rem;
+}
+.nested-code-text { 
+    color: #fff;
+    font-size: medium;
+}
+.nested-code-comment { 
+    color: gray;
+}
+
 /* --------- Scroll Up button --------- */
          
 #scroll_up_button_container {
