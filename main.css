@@ -88,6 +88,15 @@ html {
   border-bottom: 1px #f1faee outset;
 }
 
+.blog_item_metadata { 
+  display: flex;
+  justify-content: center;
+}
+.blog_item_metadata span {
+  margin: .5rem; 
+
+}
+
 .blog_item:hover { 
   font-size: large;
   color:#f1faeeae;
