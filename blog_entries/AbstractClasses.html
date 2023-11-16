@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="/blog_entries/images/pexels-markus-spiske-9858906.jpg" type="image/x-icon">
+    <link
+      rel="icon"
+      href="/blog_entries/images/pexels-markus-spiske-9858906.jpg"
+      type="image/x-icon"
+    />
     <title>Blog | Abstract | Evalid1234</title>
-    <meta name="description" content="Abstract class blog for java">
-    <meta name="author" content="Ed">
+    <meta name="description" content="Abstract class blog for java" />
+    <meta name="author" content="Ed" />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
@@ -18,12 +22,6 @@
     <!-- Custom css -->
     <link rel="stylesheet" href="./entry.css" />
 
-    <!-- FONTS -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
-
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -32,125 +30,194 @@
       defer
     ></script>
     <!-- FONTs -->
-    <script src="https://kit.fontawesome.com/9c050fdc22.js" crossorigin="anonymous" defer></script>
+    <script
+      src="https://kit.fontawesome.com/9c050fdc22.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </head>
-  <body >
-    <nav id="nav" class="mt-kj2" aria-label="nav">
-        <ol class="d-flex justify-content-center  ">
-            <li class="crumb-item "><a href="https://evalid1234.github.io" target="_self" title="Home"><i class="fa-solid fa-house fa-lg"></i> </a></li> 
-            <li class="crumb-item-divider"> | </li>
-            <li class="crumb-item "><a href="https://evalid1234.github.io/Blog" target="_self" title="Blog"> <i class="fa-solid fa-blog fa-lg"></i> </a></li>
-            
-        </ol>
+  <body>
+    <nav id="nav" aria-label="nav">
+      <ol class="d-flex justify-content-center">
+        <li class="crumb-item">
+          <a href="https://evalid1234.github.io" target="_self" title="Home"
+            >Home
+          </a>
+        </li>
+        <li class="crumb-item-divider">|</li>
+        <li class="crumb-item">
+          <a
+            href="https://evalid1234.github.io/Blog"
+            target="_self"
+            title="Blog"
+          >
+            Blog
+          </a>
+        </li>
+      </ol>
     </nav>
-    <header class="container mt-4 ">
-      <h1 class="text-center heading "><b>Abstract classes and methods.</b></h1>
-      <span class="text-secondary">
-        Last modified: 5/7/23
-      </span>
+    <header class="container">
+      <h1 class="text-center heading">Abstract classes and methods.</h1>
+      <p class="text-secondary text-center">Last modified: 5/7/23</p>
     </header>
 
-    <main>
-      <section class="container">
-       
-            <h2 class="heading">Summary</h2>
-        
-            <p >
-               This section covers abstract classes/methods in <b><em>Java</em></b> with examples. Reference: <a class="link" href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle/tutorials/abstract classes</a> 
+    <main class="container">
+      <section>
+        <h2 class="heading">Summary</h2>
 
-            <ul>
-                <li>Abstract Classes are defined <a class="link" href="#Using abstract classes and methods">using "abstract" key word. Methods are declared without implementation.</a>
-                </li>
-                <li>Abstract Classes cannot be instantiated and may include abstract methods <a class="link" href="#Using abstract classes and methods">. They may also be subclasses</a>
-                </li>
-                <li>Abstract classes can include defined methods and fields.</li>
-                <li>Abstract classes can include defined methods and fields.</li>
-                <li>Abstract classes may have, static, final, public, protected, private and concrete methods.</li>
-                <li>Abstract classes, like other classes can only be extended once.</li>
-
-
-                
-            </p>
+        <p>
+          This section covers abstract classes/methods in
+          <b><em>Java</em></b> with examples. Reference:
+          <a
+            class="link"
+            href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
+            >Oracle/tutorials/abstract classes</a
+          >
+        </p>
+        <ul>
+          <li>
+            Abstract Classes are defined
+            <a class="link" href="#Using abstract classes and methods"
+              >using "abstract" key word. Methods are declared without
+              implementation.</a
+            >
+          </li>
+          <li>
+            Abstract Classes cannot be instantiated and may include abstract
+            methods
+            <a class="link" href="#Using abstract classes and methods"
+              >. They may also be subclasses</a
+            >
+          </li>
+          <li>Abstract classes can include defined methods and fields.</li>
+          <li>Abstract classes can include defined methods and fields.</li>
+          <li>
+            Abstract classes may have, static, final, public, protected, private
+            and concrete methods.
+          </li>
+          <li>
+            Abstract classes, like other classes can only be extended once.
+          </li>
+        </ul>
       </section>
 
-       <section class="container">
-        <h3 id="Using abstract classes and methods" class="heading">Using abstact classes and methods </h3>
-            <div class="code">
-               <h4 class="code-text"><b><u>Using abstract classes.</u></b></h4>
-               <ul class="code-text">
-                    <li>Abstract classes are defined using <b>abstract keyword</b> </li>
-                    <li>Abstract classes cannot be instantiated. <I class="e">No "new" keyword.</I> </li>
-                    <li>Abstract classes can be subclassed <I class="e">can be extended.</I> </li>
-                    <li>If subclasses and the subclass does <I class="e">NOT</I> implement all abstract methods, it too becomes abstract </li>
-                    <li>If a class <i>includes</i> an abstract method, the class <i>must</i> be declared abstract <I class="e">No "new" keyword.</I>
-                    <li>Abstract classes can include defined methods and fields.</li>
+      <section>
+        <h3 id="Using abstract classes and methods" class="heading">
+          Using abstact classes and methods
+        </h3>
 
-<br>
-<code class="nested-code">
-<pre class="nested-code-text">public abstract class Car {
-    private int totalMileage; 
-    // <span class="nested-code-comment"> More Fields</span>
-    public int getTotalMileage(){  
-        return this.totalMileage;
-    }   // <span class="nested-code-comment">abstract classes may have non abstract methods. </span>
-    abstract void honk(); //<span class="nested-code-comment"> since this is abstract, class must also be</span>
-}
-</pre>
-</code>
-                    </li>
-               </ul>    
+        <h4><u> Abstract classes.</u></h4>
+        <ul>
+          <li>Abstract classes are defined using <b>abstract keyword</b></li>
+          <li>
+            Abstract classes cannot be instantiated.
+            <i class="e">No "new" keyword.</i>
+          </li>
+          <li>
+            Abstract classes can be subclassed <i class="e">can be extended.</i>
+          </li>
+          <li>
+            If subclasses and the subclass does <i class="e">NOT</i> implement
+            all abstract methods, it too becomes abstract
+          </li>
+          <li>
+            If a class <i>includes</i> an abstract method, the class
+            <i>must</i> be declared abstract <i class="e">No "new" keyword.</i>
+          </li>
+          <li>Abstract classes can include defined methods and fields.</li>
 
-               <h4 class="code-text"><b><u>Using abstract methods.</u></b></h4>
-               <ul class="code-text">
-                <li>Must be left un-implemented: </li>
-                <li>yes, it's this simple! </li>
-                    <code class="nested-code">
-                        <span class="nested-code-text"> abstract void paintCanvas(); </span>
-                    </code>
-               </ul>
-            </div>
+          <br />
+
+          <div class="code">
+            <code class="code-text">
+              public abstract class Car { <br />
+              private int totalMileage; //
+              <span class="code-comment"> More Fields</span> <br />public int
+              getTotalMileage(){ <br />return this.totalMileage; <br />} <br />
+              <span class="code-comment">
+                //abstract classes may have non abstract methods.
+              </span>
+              <br />abstract void honk(); //<span class="code-comment">
+                since this is abstract, class must also be</span
+              >
+              <br />}
+            </code>
+          </div>
+        </ul>
+
+        <h4><u> Abstract Methods.</u></h4>
+        <ul>
+          <li>Must be left un-implemented:</li>
+          <li>yes, it's this simple!</li>
+          <div class="code">
+            <code class="code-text"> abstract void paintCanvas(); </code>
+          </div>
+        </ul>
       </section>
 
-      <section class="container">
-        <h3 id="vs" class="heading">Abstract vs Interface </h3>
-            <div class="code">
-               <ul class="code-text">
-                    <li>A class can only extend one class, abstract or not. Interfaces can be extended many times by one class. </li>
-                    <li>Abstract classes may have non static, final, and protected members.</li>
-                    <li>Abstract classes may have concrete classes</li>
-<code class="nested-code">
-    <pre class="nested-code-text">
-        abstract class PaintBrush(){ 
-            private double bristleCost; <span class="nested-code-comment">// we have a private member</span>
-            public double getBristeCost(){ 
-                return this.bristleCost;  <span class="nested-code-comment">// we have a concrete method</span>
-            }
-        }
-    </pre>
-</code>
-                    <li>Abstract classes can be subclassed <I class="e">can be extended.</I> </li>
-                    <li>If subclasses and the subclass does <I class="e">NOT</I> implement all abstract methods, it too becomes abstract </li>
-                    <li>If a class <i>includes</i> an abstract method, the class <i>must</i> be declared abstract <I class="e">No "new" keyword.</I>
-                    <li>Abstract classes can include defined methods and fields.</li>
+      <section>
+        <h3 id="vs" class="heading">Abstract vs Interface</h3>
+        <ul>
+          <li>
+            A class can only extend one class, abstract or not. Interfaces can
+            be extended many times by one class.
+          </li>
+          <li>
+            Abstract classes may have non static, final, and protected members.
+          </li>
+          <li>Abstract classes may have concrete classes</li>
+          <div class="code">
+            <code class="code-text">
+              abstract class PaintBrush(){
+              <br />
+              private double bristleCost;
+              <span class="code-comment">// we have a private member</span>
+              <br />public double getBristeCost(){ <br />return
+              this.bristleCost;
+              <span class="code-comment">// we have a concrete method</span>
+              <br />
+              } }
+            </code>
+          </div>
+          <li>
+            Abstract classes can be subclassed <i class="e">can be extended.</i>
+          </li>
+          <li>
+            If subclasses and the subclass does <i class="e">NOT</i> implement
+            all abstract methods, it too becomes abstract
+          </li>
+          <li>
+            If a class <i>includes</i> an abstract method, the class
+            <i>must</i> be declared abstract <i class="e">No "new" keyword.</i>
+          </li>
+          <li>Abstract classes can include defined methods and fields.</li>
+        </ul>
+      </section>
 
-
-      <div class="rounded-circle p-2" id="scroll_up_button_container" >
-            <a href="#nav" id="scroll_up_button"> <i class="fa-solid fa-angle-up fa-lg"></i> </a>
-        
+      <div class="rounded-circle p-2" id="scroll_up_button_container">
+        <a href="#nav" id="scroll_up_button"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class=""
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M7 11l5 -5l5 5" />
+            <path d="M7 17l5 -5l5 5" />
+          </svg>
+        </a>
       </div>
     </main>
 
     <footer class="text-center footer">
-    <small>Copyright © 2023 Evalid1234 . All Rights Reserved.</small>
-    <p>
-        Author: Ed | <a class="link" href="https://evalid1234.github.io/#contact" rel="prev" target="_blank" title="contact me">Contact me</a>
-    </p>
-        <a class="link"href="https://evalid1234.github.io/Blog" rel="prev" target="_self"
-        >
-           <i class="fa-solid fa-arrow-left-long-to-line fa-lg"></i>
-           Back to blog
-        </a>
-      
+      <small>Copyright © 2023 Evalid1234 . All Rights Reserved.</small>
     </footer>
   </body>
 </html>

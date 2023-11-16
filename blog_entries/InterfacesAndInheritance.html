@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="/blog_entries/images/pexels-markus-spiske-9858906.jpg" type="image/x-icon">
+    <link
+      rel="icon"
+      href="/blog_entries/images/pexels-markus-spiske-9858906.jpg"
+      type="image/x-icon"
+    />
     <title>Blog | Interfaces | Evalid1234</title>
-    <meta name="description" content="Abstract class blog for java">
-    <meta name="author" content="Ed">
+    <meta name="description" content="Abstract class blog for java" />
+    <meta name="author" content="Ed" />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
@@ -18,12 +22,6 @@
     <!-- Custom css -->
     <link rel="stylesheet" href="./entry.css" />
 
-    <!-- FONTS -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
-
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -31,160 +29,191 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <!-- FONTs -->
-    <script src="https://kit.fontawesome.com/9c050fdc22.js" crossorigin="anonymous" defer></script>
   </head>
-  <body >
+  <body>
     <nav id="nav" class="mt-kj2" aria-label="nav">
-        <ol class="d-flex justify-content-center  ">
-            <li class="crumb-item "><a href="https://evalid1234.github.io" target="_self" title="Home"><i class="fa-solid fa-house fa-lg"></i> </a></li> 
-            <li class="crumb-item-divider"> | </li>
-            <li class="crumb-item "><a href="https://evalid1234.github.io/Blog" target="_self" title="Blog"> <i class="fa-solid fa-blog fa-lg"></i> </a></li>
-            
-        </ol>
+      <ol class="d-flex justify-content-center">
+        <li class="crumb-item">
+          <a href="https://evalid1234.github.io" target="_self" title="Home"
+            >Home</a
+          >
+        </li>
+        <li class="crumb-item-divider">|</li>
+        <li class="crumb-item">
+          <a
+            href="https://evalid1234.github.io/Blog"
+            target="_self"
+            title="Blog"
+          >
+            Blog
+          </a>
+        </li>
+      </ol>
     </nav>
-    <header class="container mt-4 ">
-      <h1 class="text-center heading "><b>Interfaces</b></h1>
-      <span class="text-secondary">
-        Last modified: 5/7/23
-      </span>
-    </header>
 
-    <main>
-      <section class="container">
-       
-            <h2 class="heading">Summary</h2>
-        
-            <p >
-               This section covers Interfaces=<b><em>Java</em></b> with examples. Reference: <a class="link" href="https://docs.oracle.com/javase/tutorial/java/IandI/index.html">Oracle java tutorial </a> 
+    <main class="container">
+      <section>
+        <header>
+          <h1 class="text-center">Java Interfaces</h1>
+          <p class="text-secondary text-center">Last modified: 5/7/23</p>
+        </header>
 
-            <ul>
-                <h5><a class="link" href="#interfaces">Interfaces</a></h5>
-                <li>Interfaces are akin to contracts that inform programmers how a program will act/interact. That is, it defines the standard, and others may implement how they wish.</li>
-                <li>Interfaces cannot be instantiated</li>
-                <li>Interfaces may extend other interfaces</li>
-                <li>May only contain constants, method declarations, default methods, static/nested types.</li>
-                <li>Interfaces are <i>implemented</i> using the "implements" keyword.</li>
-                <li>All methods public by default</li>
-                <li>All constants are: public, static, and final by default.</li>
+        <h2 class="heading">Summary</h2>
 
-            </p>
+        <p>
+          This section covers Interfaces=<b><em>Java</em></b> with examples.
+          Reference:
+          <a
+            class="link"
+            href="https://docs.oracle.com/javase/tutorial/java/IandI/index.html"
+            >Oracle java tutorial
+          </a>
+        </p>
+
+        <ul>
+          <li>
+            Interfaces are akin to contracts that inform programmers how a
+            program will act/interact. That is, it defines the standard, and
+            others may implement how they wish.
+          </li>
+          <li>Interfaces cannot be instantiated</li>
+          <li>Interfaces may extend other interfaces</li>
+          <li>
+            May only contain constants, method declarations, default methods,
+            static/nested types.
+          </li>
+          <li>
+            Interfaces are <i>implemented</i> using the "implements" keyword.
+          </li>
+          <li>All methods public by default</li>
+          <li>All constants are: public, static, and final by default.</li>
+        </ul>
       </section>
 
-       <section class="container">
+      <section>
         <h3 id="interfaces" class="heading">Using Interfaces</h3>
-            <div class="code">
-               <ul class="code-text">
-                <h4>Defining an interface</h4>
-                    <li>You define an interface using the "interface" keyword
-    <code class="nested-code">
-            <pre class="nested-code-text">
-                public interface InterfaceExample { 
-                    ....
-                }
 
-            </pre>
-    </code>
-                        </li>
-                    <li> They may also extend other interfaces and have constants and abstract methods: 
-                    <code class="nested-code ">
-        <pre class="nested-code-text ">
-            public interface InterfaceExample extends Interface1, Interface2, Interface.....InterfaceN{
-                int CONSTANT_VAR = 234; <span class="nested-code-comment"> //public, static and final</span>
+        <h4>Defining an interface</h4>
+        You define an interface using the "interface" keyword
+        <div class="code">
+          <code class="code-text">
+            public interface InterfaceExample { .... }
+          </code>
+        </div>
+        They may also extend other interfaces and have constants and abstract
+        methods:
 
-                void doWord();
-                
+        <div class="code">
+          <code class="code-text">
+            public interface InterfaceExample extends Interface1, Interface2,
+            Interface.....InterfaceN{ <br />
+            <br />int CONSTANT_VAR = 234;
+            <span class="code-comment"> //public, static and final</span>
+
+            <br /><br />void doWork();<br />
             }
+          </code>
+        </div>
 
-        </pre>
+        <h4>Using an interface</h4>
+        Use implements keyword as follows: public class -nameOfClass- implements
+        -nameOfInterface-
+        <div class="code">
+          <code class="code-text">
+            public class Example implements Interface1 {
+            <br />
+            ... <br />
+            }
+          </code>
+        </div>
+        You must also implement all abstract methods
+        <div class="code">
+          <code class="code-text">
+            public interface ExampleInterface { <br />
+            <br />
+            void doWork();
+            <br />
+            String doMoreWork(); <br />
+            } <br />
+            ------------------------------------- <br />
+            public class ExampleUsage implements ExampleInterface{ <br />
+            //other class code
+            <br />
+            <br />
+            //@method to implement <br />
+            public void doWork(){ <br />
+            //add body <br />
+            }
+            <br />
+            <br />
+            //@method to implement <br />
+            public void doMoreWork(){ <br />
+            //add body <br />
+            return "something"; <br />
+            } <br />}<br />
+          </code>
+        </div>
+        <h4>Adding content to Interfaces</h4>
+        Since adding methods can break old classes that implement an interface
+        (since they need to initialize all methods), special care is taken. you
+        can do the following:
+        <ol>
+          <li>Anticipate changes in advanced</li>
+          <li>Define methods as default methods</li>
+          <div class="code">
+            <code class="code-text">
+              <span class="code-comment">//method to add to interface</span>
+              <br />
+              default void doSomething(){
+              <br />
+              <span class="code-comment"
+                >// you must define the method body</span
+              >
+              <br />
+              }
+            </code>
+          </div>
+          <li>create another interface that extends the old one</li>
+          <div class="code">
+            <code class="code-text">
+              public interface newUpgradedInterface extends
+              oldDeprecatedInterface {//all old and new methods}
+            </code>
+          </div>
+        </ol>
 
-                        </code>
-                        </li>
-
-            <h4>Using an interface</h4>
-                <li>Use implements keyword as follows: public class -nameOfClass- implements -nameOfInterface- </li>
-            
-                <code class="nested-code nested-code-text">
-                    public class Example implements Interface1 {
-                        <br>
-                        ... <br>
-                    }
-
-                </code>
-                <li>You must also implement all abstract methods</li>
-                 <code class="nested-code nested-code-text">
-                    <pre>
-                    public interface ExampleInterface {
-
-                        void doWork();
-                        String doMoreWork();
-                    }
-                    -------------------------------------
-                    public class ExampleUsage implements ExampleInterface{
-                        //other class code
-
-                        //@method to implement
-                        public void doWork(){
-                            //add body
-                        }
-
-                        //@method to implement
-                        public void doMoreWork(){
-                            //add body
-                            return "something";
-                        }
-                    }
-                    </pre>
-                </code>
-                <h4> Adding content to Interfaces</h4>
-                <li>Since adding methods can break old classes that implement an interface (since they need to initialize all methods), special care is taken.</li>
-                <li>you can do the following: 
-                        <ol>
-                            <li>Anticipate changes in advanced</li>
-                            <li>Define methods as default methods</li>
-                            <code class="nested-code nested-code-text">
-                                <span class="nested-code-comment">//method to add to interface</span> <br>
-                                default void doSomething(){ 
-                                    <br>
-                                    <span class="nested-code-comment">// you must define the method body</span>
-                                    <br>
-                                }  
-                            </code>
-                            <li>create another interface that extends the old one</li>
-                            <code class="nested-code nested-code-text">
-                                public interface newUpgradedInterface extends oldDeprecatedInterface {//all old and new methods} 
-                            </code>
-                        </ol>
-                </li>
-                <li>New static methods can be added without breaking users who used the interface before change.</li>
-                <h4>Interface as types</h4>
-                <li>An interface is a user defined reference type</li>
-                <li>When an object is instantiated from a class that implements an interface, it may use both the interface and base/superclass types.</li>
-
-            </ul>    
-
-            </div>
+        New static methods can be added without breaking users who used the
+        interface before change.
+        <h4>Interface as types</h4>
+        An interface is a user defined reference type When an object is
+        instantiated from a class that implements an interface, it may use both
+        the interface and base/superclass types.
       </section>
 
-
-
-      <div class="rounded-circle p-2" id="scroll_up_button_container" >
-            <a href="#nav" id="scroll_up_button"> <i class="fa-solid fa-angle-up fa-lg"></i> </a>
-        
+      <div class="rounded-circle p-2" id="scroll_up_button_container">
+        <a href="#nav" id="scroll_up_button"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class=""
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M7 11l5 -5l5 5" />
+            <path d="M7 17l5 -5l5 5" />
+          </svg>
+        </a>
       </div>
     </main>
 
     <footer class="text-center footer">
-    <small>Copyright © 2023 Evalid1234 . All Rights Reserved.</small>
-    <p>
-        Author: Ed | <a class="link" href="https://evalid1234.github.io/#contact" rel="prev" target="_blank" title="contact me">Contact me</a>
-    </p>
-        <a class="link"href="https://evalid1234.github.io/Blog" rel="prev" target="_self"
-        >
-           <i class="fa-solid fa-arrow-left-long-to-line fa-lg"></i>
-           Back to blog
-        </a>
-      
+      <small>Copyright © 2023 Evalid1234 . All Rights Reserved.</small>
     </footer>
   </body>
 </html>
