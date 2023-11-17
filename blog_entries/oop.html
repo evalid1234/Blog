@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="icon"
+      href="/blog_entries/images/pexels-markus-spiske-9858906.jpg"
+      type="image/x-icon"
+    />
+    <title>Blog | Bits | Evalid1234</title>
+    <meta name="description" content="Abstract class blog for java" />
+    <meta name="author" content="Ed" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./entry.css" />
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <nav id="nav" class="mt-kj2" aria-label="nav">
+      <ol class="d-flex justify-content-center">
+        <li class="crumb-item">
+          <a href="https://evalid1234.github.io" target="_self" title="Home"
+            >Home</a
+          >
+        </li>
+        <li class="crumb-item-divider">|</li>
+        <li class="crumb-item">
+          <a
+            href="https://evalid1234.github.io/Blog"
+            target="_self"
+            title="Blog"
+          >
+            OOP Principles
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <main class="container">
+      <section>
+        <header>
+          <h1 class="text-center">Summary</h1>
+          <p class="text-secondary text-center">11/17/2023</p>
+        </header>
+
+        <p>
+          This section covers OOP principles in <b><em>Java</em></b> with
+          examples.
+        </p>
+
+        <ul>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#objects">Objects</a></li>
+          <li><a href="#encapsulation">Encapsulation</a></li>
+          <li><a href="#abstraction">Abstraction</a></li>
+          <li><a href="#polymorphism">Polymorphism</a></li>
+          <li><a href="#inheritance">Inheritance</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="classes" class="heading">Classes</h2>
+        <p>
+          Classes are the blueprints that represent real world objects. Any noun
+          you can think of can be represented as a class. Classes are integral
+          since they allow for the rapid and consistent construction of
+          "instances", which are the objects themselves. Classes can have
+          properties/fields, these are things like names, height, color etc...
+          basically inherent traits of an object or thing. They also have
+          methods, these are the actions the object can do, like "bark" if the
+          object is a dog, or "fly", if its a bird. Classes are powerful since
+          one class can quickly produce instances of objects all in one class
+          that is easily altered/extended (if loosely coupled).
+        </p>
+
+        <div class="code">
+          <code class="code-text">
+            public class Dog {
+            <br /><span class="code-comment">//properties</span> <br />
+            private String breed; <br /><span class="code-comment"
+              >//methods</span
+            >
+            <br />public void bark(){ // woof } }
+          </code>
+        </div>
+
+        <p>
+          Classes are constructed via a constructor which in Java is a method
+          that is inherently provided if not defined. They have the same name as
+          the class and are public since they need to be called by other classes
+        </p>
+        <p class="code">
+          <code class="code-text"> public Dog(String breed){ } </code>
+        </p>
+        <p>
+          Notice they have parameter options, which means users can pass
+          arguments to the constructor for initialization
+        </p>
+        <p class="code">
+          <code class="code-text">
+            public Dog(String breed){ this.breed = breed; }
+          </code>
+        </p>
+      </section>
+
+      <section id="objects">
+        <h2 class="heading">Objects</h2>
+
+        <p>
+          Objects are the instances of a class. If a class is a blueprint of a
+          <i>thing</i> then an object <b>is</b> the thing. For example, in the
+          dog class above, an object would could be a chihuahua named peter.
+        </p>
+        <p>
+          objects are constructed using the class name and the "new" keyword
+        </p>
+        <p class="code">
+          <code class="code-text">
+            Dog peter = new Dog("chihuahua");
+            <span class="code-comment">
+              Notice the '()', this calls the constructor of the class</span
+            >
+          </code>
+        </p>
+        <p>
+          Just like that we have a dog variable named peter that has a breed of
+          chihuahua. Now this is a pretty poorly built class, but the idea is
+          there, classes are useful!
+        </p>
+      </section>
+
+      <section id="encapsulation">
+        <h2 class="heading">Encapsulation</h2>
+        <p>
+          Encapsulation is the art of grouping related data and methods into a
+          class. Some like to refer to it as data hiding, since often you use
+          access modifiers like "public", "private" etc.. to limit the scope of
+          use. This is often paired with setters and getters to fine tune the
+          access control of the data.
+        </p>
+        <p class="code">
+          <code class="code-text">
+            public Person {
+            <br />private String name; <br />
+            private int age; <br />public int getAge(); <br />public String
+            getName(); <br />
+            }
+          </code>
+        </p>
+        <p>
+          notice how, using these modifiers you can now only get the name and
+          age property values via public methods and you <b>cannot</b> alter the
+          data yourself outside the class!
+        </p>
+        <p>
+          In a sense, a class dedicated to a single object is in itself an
+          example of encapsulation since you are grouping related properties and
+          actions to define a real life object.
+        </p>
+      </section>
+
+      <section id="abstraction">
+        <h2 class="heading">Abstraction</h2>
+        <p>
+          Abstraction is the hiding of minute details. Often, programmers don't
+          need to know how something works, they care about the big picture. One
+          example could be a car or bus. We do not care about every component of
+          the car like the bolts used or wiring manufactures, we want the
+          <i>car</i> and it's important function. Well then, what are important
+          functions? In the case of the car, this could be: driving, honking,
+          braking etc.. they are broadly defined actions that are made up of
+          <i>many</i> individual and hidden components. A honk requires the use
+          of many electronics, the registering of human input and much more, but
+          in reality we do not care how this is handled in everyday use, we just
+          want it to make the noise. This is commonly done by limiting the scope
+          of internal code via the "private" keyword, and using public methods
+          to retrieve the necessary code only.
+        </p>
+
+        <p class="code">
+          <code class="code-text">
+            public class Car {
+            <br />private void flipHonkMultiplexer(){//} <br />
+            <span class="code-comment">//other private methods</span>
+            <br />
+            <br />
+            public void honk(){
+            <br />
+            flipHonkMultiplexer(); <br />
+            <span class="code-comment">//other private honk internal code</span>
+            <br />
+            } <br />
+            }
+          </code>
+        </p>
+
+        <p>
+          In the above, the user gets the honk noise via a single public honk()
+          call, but they never interact with the private methods that, together,
+          produce the honk noise. Just how we like it.
+        </p>
+      </section>
+
+      <section id="polymorphism">
+        <h2 class="heading">Polymorphism</h2>
+        <p>
+          Polymorphism is the principle of having "many forms". There are many
+          forms of polymorphism, overloading, overriding, type casting etc..
+          this is typically done in compile or run-time.
+        </p>
+        <p>
+          overloading is done in compile-time, this is often used in methods,
+          but can also extend to operators.
+        </p>
+        <p class="code">
+          <code class="code-text">
+            public foo();
+            <br />
+            public foo(int bar); <br />
+            public foo(String bar);
+          </code>
+        </p>
+        <p>
+          Notice we have 3 public methods all with the same name, this is
+          possible since the compiler differentiates based on the parameter
+          list. This allows the foo method to define different behavior based on
+          the arguments passed, essentially taking many forms.
+        </p>
+
+        <p>
+          Run time polymorphism can also happen in many forms, it can be as
+          simple as type casting, to passing generics and method overriding a
+          superclass method
+        </p>
+        <p>Casting</p>
+        <p class="code">
+          <code class="code-text"> Dog puppy = new Shitzu(); </code>
+        </p>
+        <p>Casting</p>
+        <p class="code">
+          <code class="code-text"
+            >double number = (double) 12;
+            <span class="code-comment"
+              >This would happen automatically but still a casting.</span
+            >
+          </code>
+        </p>
+        <p>Overriding</p>
+        <p class="code">
+          <code class="code-text">
+            class Parent {
+            <br />
+            void Print() <br />}
+
+            <br />
+            // Class 2 <br />
+            class subclass1 extends Parent { <br />void Print(){ //print 1 }
+            <br />
+            } <br />class subclass2 extends Parent { <br />
+            void Print() { // Print 2 } }
+            <br />
+          </code>
+        </p>
+        <p>
+          If we called the functions Print from both subclasses the print would
+          be "1" and "2" respectively. Showing how overriding occurs.
+        </p>
+      </section>
+
+      <section id="inheritance">
+        <h2 class="inheritance">Inheritance</h2>
+        <p>
+          Classes can inherit properties and methods of another class, known as
+          the "base" or "super" class. This allows for swift code extension and
+          reuse, without the need for more typing. Classes and interfaces
+          inherit using the "extends" keyword.
+        </p>
+
+        <p class="code">
+          <code class="code-text">
+            public class Dog{//properties and methods}
+            <br />
+            public class Chihuahua extends Dog{ <br />
+            //all dog code <br />
+            public customChihuhuaFeature();
+            <br />
+            }
+          </code>
+        </p>
+      </section>
+
+      <div class="rounded-circle p-2" id="scroll_up_button_container">
+        <a href="#nav" id="scroll_up_button"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class=""
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M7 11l5 -5l5 5" />
+            <path d="M7 17l5 -5l5 5" />
+          </svg>
+        </a>
+      </div>
+    </main>
+
+    <footer class="text-center footer">
+      <small>Copyright © 2023 Evalid1234 . All Rights Reserved.</small>
+    </footer>
+  </body>
+</html>
